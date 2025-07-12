@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>猜數字遊戲</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+      .game-container {
+        margin: 50px auto;
+        max-width: 400px;
+      }
+      input {
+        padding: 10px;
+        font-size: 16px;
+        width: 100%;
+      }
+      button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+      .result {
+        margin: 20px 0;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="game-container">
+      <h1>猜數字遊戲</h1>
+      <p>我想了一個 1 到 100 之間的數字，快猜！</p>
+      <input
+        type="number"
+        id="guessInput"
+        min="1"
+        max="100"
+        placeholder="輸入你的猜測"
+      />
+      <button onclick="checkGuess()">猜！</button>
+      <div id="result" class="result"></div>
+    </div>
+
+    <script>
+      let secretNumber = Math.floor(Math.random() * 100) + 1;
+
+      function checkGuess() {
+        let input = document.getElementById("guessInput").value;
+        let guess = parseInt(input);
+        let result = document.getElementById("result");
+
+        if (input.trim() === "" || isNaN(guess)) {
+          result.textContent = "請輸入有效的數字！";
+          result.style.color = "orange";
+          return;
+        }
+
+        if (guess < 1 || guess > 100) {
+          result.textContent = "請輸入 1 到 100 之間的數字！";
+          result.style.color = "orange";
+          return;
+        }
+
+        if (guess === secretNumber) {
+          result.textContent = `恭喜！你猜對了！答案是 ${secretNumber}`;
+          result.style.color = "green";
+        } else if (guess < secretNumber) {
+          result.textContent = "太小了！再試試看";
+          result.style.color = "blue";
+        } else {
+          result.textContent = "太大了！再試試看";
+          result.style.color = "red";
+        }
+
+        document.getElementById("guessInput").value = "";
+      }
+    </script>
+  </body>
+</html>

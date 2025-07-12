@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>範例網頁</title>
+    <style>
+        body {
+            background-color: chocolate;
+            width: 100%;
+            margin: 0;
+        }
+
+        div {
+            margin: 10px;
+            padding: 10px;
+        }
+
+        img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>範例網頁</h1>
+        <input type='number'>
+        <div>
+            <button>按鈕</button>
+            <button>按鈕</button>
+            <button>按鈕</button>
+
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/HelloWorld.svg/2560px-HelloWorld.svg.png"
+                alt="替代文字">
+
+        </div>
+
+        <pre>蘋果
+香蕉
+橘子
+葡萄
+芒果</pre>
+    </div>
+
+    <!-- 藏起來的文字 -->
+
+    <input type="text" id="nameInput" placeholder="請輸入姓名" />
+    <button onclick="sayHello()">打招呼</button>
+    <p id="output">結果會顯示在這裡</p>
+
+    <script>
+        function sayHello() {
+            // 印出字串確定 JS 有在工作
+            console.log("嗨!");
+
+            // 取得輸入框這個元素
+            let nameInput = document.getElementById("nameInput");
+
+            // 取得輸入框的值
+            let name = nameInput.value;
+
+            // 取得要顯示結果的元素
+            let output = document.getElementById("output");
+
+            // 設定文字內容
+            output.textContent = "你好，" + name + "！";
+
+            // 設定文字顏色
+            output.style.color = "white";
+        }
+    </script>
+</body>
+
+</html>
