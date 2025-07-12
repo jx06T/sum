@@ -574,6 +574,8 @@ function sayHello() {
 </html>
 ```
 
+線上範例 [https://jx06t.github.io/sum/demo.html](https://jx06t.github.io/sum/demo.html)
+
 ### 專案擴展想法
 
 完成基本功能後，可以考慮添加：
@@ -721,7 +723,6 @@ function sayHello() {
 ### `<script>`：嵌入 JavaScript
 
 - 可寫在 `<head>` 或 `<body>` 中
-- 使用 `src="..."` 引入外部檔案
 - 範例：
 
 ```html
