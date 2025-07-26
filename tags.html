@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML標籤介紹</title>
+    <style>
+        div {
+            border: 1px solid #000;
+            margin: 10px 0;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>HTML基本標籤介紹</h1>
+    <div>
+        <h2>說明</h2>
+        <p>div 標籤一般不會顯示黑色邊框，在這裡故意讓它顯示方便觀察</p>
+    </div>
+    
+    <div>
+        <h2>標題標籤（h1 到 h6）</h2>
+        <p>HTML提供六個層級的標題標籤，數字越小標題越大：</p>
+        <p><strong>語法：</strong>&lt;h1&gt;標題內容&lt;/h1&gt; 、 &lt;h6&gt;標題內容&lt;/h6&gt; 等等</p> 
+        <h1>這是 h1 標題</h1>
+        <h2>這是 h2 標題</h2>
+        <h3>這是 h3 標題</h3>
+        <h4>這是 h4 標題</h4>
+        <h5>這是 h5 標題</h5>
+        <h6>這是 h6 標題</h6>
+    </div>
+
+    <div>
+        <h2>段落標籤（p）</h2>
+        <p><strong>語法：</strong>&lt;p&gt;段落內容&lt;/p&gt;</p>
+        <p>這是一個段落。段落標籤用來包含一段文字內容，瀏覽器會自動在段落前後加上間距。</p>
+        <p>這是另一個段落。你可以看到兩個段落之間有明顯的間隔。</p>
+        <p>段落是網頁中最常用的文字容器標籤之一。</p>
+    </div>
+
+    <div>
+        <h2>按鈕標籤（button）</h2>
+        <p><strong>語法：</strong>&lt;button&gt;按鈕文字&lt;/button&gt;</p>
+        <p>按鈕標籤用來創建可點擊的按鈕：</p>
+        <button>普通按鈕</button>
+    </div>
+
+    <div>
+        <h2>輸入框標籤（input）</h2>
+        <p><strong>語法：</strong>&lt;input type="類型" placeholder="提示文字"&gt;</p>
+        <p><strong>注意：</strong>input 是單一標籤，不需要結束標籤</p>
+        <p>輸入框標籤有很多不同的類型：</p>
+        <p>文字輸入框：<input type="text" placeholder="請輸入文字"></p>
+        <p>密碼輸入框：<input type="password" placeholder="請輸入密碼"></p>
+        <p>數字輸入框：<input type="number" placeholder="請輸入數字"></p>
+        <p>電子郵件：<input type="email" placeholder="請輸入email"></p>
+    </div>
+
+    <div>
+        <h2>區塊容器標籤（div）</h2>
+        <p>div是最常用的容器標籤，用來包含其他元素。你可以看到這個網頁中每個區塊都被div包圍著，所以有黑色邊框。</p>
+        
+        <div>
+            <p>這是巢狀的div，div裡面還可以包含其他div。</p>
+            <div>
+                <p>這是更深層的巢狀div。</p>
+            </div>
+        </div>
+        
+        <p>div本身沒有特殊的視覺效果，主要用來組織和分組內容。</p>
+    </div>
+</body>
+
+</html>
