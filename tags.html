@@ -11,20 +11,40 @@
             margin: 10px 0;
             padding: 10px;
         }
+
+        pre {
+            margin: 0;
+            padding: 0;
+            color: white;
+            pointer-events: none;
+        }
+
+        pre::selection {
+            background-color: rgb(255, 255, 255);
+            color: rgb(255, 255, 255);
+        }
+
+        #dd {
+            background-color: #eee;
+        }
+
+        h2 {
+            display: block;
+        }
     </style>
 </head>
 
 <body>
-    <h1>HTML基本標籤介紹</h1>
+    <h1 id="dd">HTML基本標籤介紹</h1>
     <div>
         <h2>說明</h2>
         <p>div 標籤一般不會顯示黑色邊框，在這裡故意讓它顯示方便觀察</p>
     </div>
-    
+
     <div>
         <h2>標題標籤（h1 到 h6）</h2>
         <p>HTML提供六個層級的標題標籤，數字越小標題越大：</p>
-        <p><strong>語法：</strong>&lt;h1&gt;標題內容&lt;/h1&gt; 、 &lt;h6&gt;標題內容&lt;/h6&gt; 等等</p> 
+        <p><strong>語法：</strong>&lt;h1&gt;標題內容&lt;/h1&gt; 、 &lt;h6&gt;標題內容&lt;/h6&gt; 等等</p>
         <h1>這是 h1 標題</h1>
         <h2>這是 h2 標題</h2>
         <h3>這是 h3 標題</h3>
@@ -62,16 +82,57 @@
     <div>
         <h2>區塊容器標籤（div）</h2>
         <p>div是最常用的容器標籤，用來包含其他元素。你可以看到這個網頁中每個區塊都被div包圍著，所以有黑色邊框。</p>
-        
+
         <div>
             <p>這是巢狀的div，div裡面還可以包含其他div。</p>
             <div>
                 <p>這是更深層的巢狀div。</p>
             </div>
         </div>
-        
+
         <p>div本身沒有特殊的視覺效果，主要用來組織和分組內容。</p>
     </div>
+    <!-- 這裡有藏起來的密碼是 9251 -->
+    <div>
+        <h2>下面有藏東西喔</h2>
+        <pre id="ss"></pre>
+    </div>
+
+    <div>
+        <input type="text" id="nameInput" placeholder="請輸入姓名" />
+        <button id="btn" onclick="sayHello()">打招呼</button>
+        <p id="output">結果會顯示在這裡</p>
+    </div>
+    <script>
+        const tt = `           ____                      ,\n          /---.'.__             ____//\n               '--.\\           /.---'\n          _______  \\\\         //\n        /.------.\\  \\|      .'/  ______\n       //  ___  \\ \\ ||/|\\  //  _/_----.\\__
+      |/  /.-.\\  \\ \\:|< >|// _/.'..\\   '--'\n         //   \\'. | \\'.|.'/ /_/ /  \\\\\n        //     \\ \\_\\/" ' ~\\-'.-'    \\\\\n       //       '-._| :H: |'-.__     \\\\
+      //           (/'==='\\)'-._\\     ||\n      ||                        \\\\    \\|\n      ||                         \\\\    '\n      |/                          \\\\
+                                   ||\n                                   ||\n                                   \\\\\n                                    '
+`
+        document.getElementById('ss').innerText = tt;
+    </script>
+
+    <script>
+        function sayHello() {
+            // 印出字串確定 JS 有在工作
+            console.log("嗨!");
+
+            // 取得輸入框這個元素
+            let nameInput = document.getElementById("nameInput");
+
+            // 取得輸入框的值
+            let name = nameInput.value;
+
+            // 取得要顯示結果的元素
+            let output = document.getElementById("output");
+
+            // 設定文字內容
+            output.textContent = "你好，" + name + "！";
+
+            // 設定文字顏色
+            output.style.color = "red";
+        }
+    </script>
 </body>
 
 </html>
