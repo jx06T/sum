@@ -1,0 +1,116 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.nato {
+  background-color: #fefefe;
+  height: 4rem;
+  border-bottom: 1px solid black;
+  position: fixed;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nato > a {
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+.nato > div {
+  margin-right: 1rem;
+}
+
+.nato > div > button {
+  margin: 0px 10px;
+  height: 3rem;
+  padding: 0.2rem 1rem;
+  font-size: 1.2rem;
+}
+
+.ma {
+  padding: 0 4%;
+  padding-top: 6rem;
+}
+
+.tp-btn > button {
+  /* margin: 0px 10px; */
+  margin-right: 10px;
+  height: 2.6rem;
+  padding: 0.2rem 2rem;
+  background-color: transparent;
+  border: #11366e 1px solid;
+  border-radius: 4px;
+  color: #11366e;
+  font-size: 1.2rem;
+}
+
+.text-are {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.la {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  /* padding: 0 1rem; */
+  gap: 1.5rem;
+}
+
+.la > div {
+  text-align: start;
+  /* width: 50%; */
+  flex-grow: 1;
+}
+
+.la span {
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+.in {
+  width: 100%;
+  display: flex;
+  /* padding: 0 1rem; */
+  gap: 1.5rem;
+}
+
+.in > div {
+  flex-grow: 1;
+  /* width: 100%; */
+  border: solid 1px #aaa;
+  padding: 2px;
+  margin-top: 1rem;
+}
+
+.in textarea {
+  width: 99%;
+  height: 6rem;
+  font-size: 1.2rem;
+  border: none;
+}
+
+.w {
+  height: 40px;
+  width: 100%;
+  text-align: start;
+  margin-left: 1rem;
+}
+
+.b {
+  text-align: center;
+  width: 100%;
+}
+.b > button {
+  margin-top: 6rem;
+  font-size: 1.4rem;
+  border-radius: 100%;
+  height: 8rem;
+  width: 8rem;
+  background-color: transparent;
+  margin: 2rem;
+}

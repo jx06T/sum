@@ -1,0 +1,218 @@
+/* === 初始設定 (讓結構可視化) === */
+/* 這是課程開始前的預設樣式，幫助學生看清楚每個 div 的範圍 */
+
+* {
+  box-sizing: border-box; /* 讓寬高計算更直觀 */
+}
+
+body {
+  font-family: sans-serif;
+  margin: 15px; /* 清除預設邊界 */
+}
+
+#big-title {
+  /* font-size: 20px; */
+}
+
+/* 用不同顏色區分巢狀結構 */
+#page-container {
+  border: 3px solid #f06292; /* 粉紅色 */
+  background-color: #fce4ec;
+  /* height: 100vh;  */
+  /* 佔滿整個視窗高度，為垂直置中做準備 */
+}
+
+.card {
+  border: 3px solid #4fc3f7; /* 藍色 */
+  background-color: #e1f5fe;
+  padding: 10px;
+}
+
+.card-header,
+.card-footer {
+  border: 2px dashed #81c784; /* 綠色 */
+  background-color: #e8f5e9;
+  padding: 10px;
+  margin: 5px 0;
+}
+
+.card-body {
+  border: 2px dashed #ffd54f; /* 黃色 */
+  background-color: #fffde7;
+  padding: 10px;
+}
+
+.item {
+  border: 2px solid #ff8a65; /* 橘色 */
+  background-color: #fbe9e7;
+  padding: 15px;
+  margin: 5px; /* 預設的外距 */
+}
+
+.item > * {
+  padding: 0;
+  margin: 0;
+}
+
+/* === 課程實作區 === */
+/* 請老師帶領學生，逐一解除以下區塊的註解來觀察效果 */
+
+/* --- 1. CSS 單位 (Units) --- */
+/*
+.card {
+  width: 80%;       
+  max-width: 800px; 
+}
+
+h1 {
+  font-size: 2rem; 
+}
+
+.item p {
+  font-size: 1rem;
+}
+
+.item .inner-text {
+  font-size: 1.5em; 
+}
+*/
+
+/* --- 2. Display 屬性 --- */
+/* 試試看把 .item 的 display 改成不同模式 */
+/*
+.item {
+  display: inline-block; 
+  width: 30%;
+}
+*/
+/*
+.card-header h1 {
+  display: inline;
+}
+
+.card-footer .btn {
+  display: block;
+  width: 100%;
+}
+*/
+
+/* --- 3. Position 定位 --- */
+/* 3a. Relative: 相對自己的位置微調 */
+/*
+#item-2 {
+  position: relative;
+  top: 20px;
+  left: 30px;
+  background-color: #b39ddb; 
+}
+*/
+
+/* 3b. Absolute: 相對於「有定位的父層」*/
+/*
+.card-body {
+  position: relative; 
+  height: 300px;
+}
+#item-2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  background-color: #b39ddb; 
+}
+*/
+
+/* 3c. Fixed: 相對於瀏覽器視窗 */
+/*
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ef5350;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+*/
+
+/* --- 4. Transform 與傳統置中法 --- */
+/* 讓卡片在頁面正中央 (Absolute + Transform) */
+/*
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 80%;
+  max-width: 800px;
+}
+*/
+
+/* --- 5. Flexbox 基礎排版 --- */
+/* Flexbox 是現代排版的核心，請觀察 #flex-container 裡面的 .item 如何變化 */
+/*
+#flex-container {
+  display: flex;
+  
+  /* 主軸對齊 (水平) */
+/* justify-content: flex-start;  /* 預設值 */
+/* justify-content: center; */
+/* justify-content: flex-end; */
+/* justify-content: space-between; */
+/* justify-content: space-around; */
+/* justify-content: space-evenly; */
+
+/* 交叉軸對齊 (垂直) */
+/* align-items: stretch; */ /* 預設值 */
+/* align-items: flex-start; */
+/* align-items: center; */
+/* align-items: flex-end; */
+
+/* 換行與方向 */
+/* flex-direction: column; */
+/* flex-wrap: wrap; */
+
+/* gap: 10px; */ /* 控制項目間距的超好用屬性 */
+/* } */
+
+/* --- 6. 置中法大合集 (Flex & Grid & 最新方法) --- */
+
+/* 6a. 用 Flexbox 讓卡片在頁面正中央 (最常用) */
+/*
+#page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  width: 80%;
+  max-width: 800px;
+}
+*/
+
+/* 6b. 用 Grid 讓卡片在頁面正中央 (最簡潔) */
+/*
+#page-container {
+  display: grid;
+  place-items: center;
+}
+.card {
+  width: 80%;
+  max-width: 800px;
+}
+*/
+
+/* 6c. ✨最新方法✨ 用 align-content 置中 (不需要改 display) */
+/* 提醒學生：這個寫法很新，需要檢查瀏覽器支援度！ */
+/*
+#page-container {
+  align-content: center;
+}
+.card {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+*/
