@@ -56,15 +56,15 @@ body {
 .la {
   width: 100%;
   display: flex;
-  justify-content: flex-start;
   /* padding: 0 1rem; */
   gap: 1.5rem;
 }
 
 .la > div {
   text-align: start;
-  /* width: 50%; */
   flex-grow: 1;
+  display: block;
+  width: 400px;
 }
 
 .la span {
@@ -81,15 +81,14 @@ body {
 
 .in > div {
   flex-grow: 1;
-  /* width: 100%; */
   border: solid 1px #aaa;
   padding: 2px;
   margin-top: 1rem;
 }
 
 .in textarea {
-  width: 99%;
-  height: 6rem;
+  width: 96%;
+  /* height: 7rem; */
   font-size: 1.2rem;
   border: none;
 }
